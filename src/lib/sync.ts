@@ -10,9 +10,12 @@ let inFlight: Promise<void> | null = null
 let queuedForce = false
 const listeners = new Set<() => void>()
 
+let snapshot = { status, lastError }
 export function getSyncStatus() {
-  return { status, lastError }
+  return snapshot
 }
+
+
 export function subscribeSync(fn: () => void) {
   listeners.add(fn)
   return () => {
