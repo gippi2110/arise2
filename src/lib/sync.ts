@@ -25,6 +25,7 @@ export function subscribeSync(fn: () => void) {
 function setStatus(s: SyncStatus, err: string | null = null) {
   status = s
   lastError = err
+  snapshot = { status: s, lastError: err }
   listeners.forEach((l) => l())
 }
 
