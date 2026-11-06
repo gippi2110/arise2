@@ -1,0 +1,13 @@
+node_modules
+dist
+.netlify/state.json
+.netlify/functions-serve
+.netlify/blobs-serve
+.netlify/netlify.toml
+.netlify/plugins
+*.log
+.env
+.env.*
+.netlify/db
+.netlify/functions-internal
+.netlify/v1
